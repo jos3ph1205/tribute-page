@@ -3,11 +3,39 @@ let winScroll = window.scrollY;
 const navBar = document.getElementById("navbar");
 const navWrapper = document.getElementById("nav");
 
+function scrollToTargetAdjusted(href){
+    console.log(href);
+
+    var element = document.getElementById(href);
+    var headerOffset = 70;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+}
+
+let event = document.querySelectorAll('[data-yr-btn]').forEach(anchor => {
+    let href = anchor.getAttribute('data-yr-btn');
+    console.log(href);
+    anchor.addEventListener("click", () => {
+        scrollToTargetAdjusted(href);
+    })
+})
+
+function toggleYrSb() {
+    document.getElementById("yr-sidebar").classList.toggle("hide-yr-sidebar");
+}
+
+console.log(event);
+
 function updateImages() {
     if (w < 1000) {
-        document.getElementById("img").src = "Images/black-panther.jpg";
+        document.getElementById("img").src = "https://jos3ph1205.github.io/tribute-page/img/black_panther.jpg";
     } else if ( w > 1000) {
-        document.getElementById("img").src = "Images/Chadwick Boseman Banner.png";
+        document.getElementById("img").src = "https://jos3ph1205.github.io/tribute-page/img/chadwick_boseman_banner.png";
     }
 }
 
@@ -40,15 +68,16 @@ function showScrollBar() {
 
 
 
-addEventListener("resize", (event) => {
+
+addEventListener("resize", () => {
     updateImages();
 });
 
-addEventListener("load", (event) => {
+addEventListener("load", () => {
     updateImages();
     showScrollBar();
 });
 
-addEventListener("scroll", (event) => {
+addEventListener("scroll", () => {
     showScrollBar();
 });
