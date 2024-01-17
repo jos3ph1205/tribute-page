@@ -4,7 +4,7 @@ const navBar = document.getElementById("navbar");
 const navWrapper = document.getElementById("nav");
 
 function scrollToTargetAdjusted(href){
-    console.log(href);
+    // console.log(href);
 
     var element = document.getElementById(href);
     var headerOffset = 70;
@@ -19,7 +19,6 @@ function scrollToTargetAdjusted(href){
 
 let event = document.querySelectorAll('[data-yr-btn]').forEach(anchor => {
     let href = anchor.getAttribute('data-yr-btn');
-    console.log(href);
     anchor.addEventListener("click", () => {
         scrollToTargetAdjusted(href);
     })
@@ -31,13 +30,6 @@ function toggleYrSb() {
 
 console.log(event);
 
-function updateImages() {
-    if (w < 1000) {
-        document.getElementById("img").src = "https://jos3ph1205.github.io/tribute-page/img/black_panther.jpg";
-    } else if ( w > 1000) {
-        document.getElementById("img").src = "https://jos3ph1205.github.io/tribute-page/img/chadwick_boseman_banner.png";
-    }
-}
 
 // Navbar Top Edge Hover
 navWrapper.addEventListener("mouseenter", (event) => {
@@ -67,14 +59,12 @@ function showScrollBar() {
 }
 
 
-
-
-addEventListener("resize", () => {
-    updateImages();
-});
+// addEventListener("resize", () => {
+//     
+// });
 
 addEventListener("load", () => {
-    updateImages();
+
     showScrollBar();
 });
 
