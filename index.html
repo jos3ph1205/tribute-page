@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
    <div id="nav" class="nav">
       <div id="navbar" class="navbar">
          <div class="nav-links">
-            <a href="#tribute-home">Home</a>
-            <a href="#tribute-info">About</a>
-            <a href="#tribute-timeline">Timeline</a>
-            <a href="#tribute-timeline">Info</a>
+            <a href="#home">Home</a>
+            <a href="#info">About</a>
+            <a href="#timeline">Timeline</a>
+            <div class="info">
+               <p id="infolink" href="" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" class="">Info<i class="fa-solid fa-caret-down"></i></p>
+               <div id="infoWin" class="info-dropdown">
+                  <a class="info-dd-option" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" href="#movies">Movies</a>
+                  <a class="info-dd-option" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" href="#shows">TV Shows</a>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -22,137 +30,221 @@
    <main id="main">
 
       <!-- Banner Design -->
-      <div id="tribute-home" class="banner">
+      <div id="home" class="banner">
          <div class="title">
             <h1 id="title">Chadwick Boseman</h1>
             <p>Actor • Playwright • Black Panther</p>
          </div>
-         <img id="img" src="https://jos3ph1205.github.io/tribute-page/img/black_panther.jpg" alt="Banner image of Chadwick Boseman">
-      </div>   
+         <img id="img" src="https://jos3ph1205.github.io/tribute-page/img/black_panther.jpg"
+            alt="Banner image of Chadwick Boseman">
+      </div>
 
       <!-- Tribute Info Design -->
-      <div id="tribute-info" class="tribute-info">
+      <div id="info" class="tribute-info">
          <div class="tribute-image">
             <div id="img-div">
                <div id="image-div">
-                  <img id="image" src="https://jos3ph1205.github.io/tribute-page/img/chadwick_boseman.jpg" alt="Image of Chadwick Boseman at comic con">
+                  <img id="image" src="https://jos3ph1205.github.io/tribute-page/img/chadwick_boseman.jpg"
+                     alt="Image of Chadwick Boseman at comic con">
                   <span class="circle-spin"></span>
                </div>
                <div id="img-caption">Chadwick @ Comic Con</div>
             </div>
          </div>
-         
+
          <div class="tribute-content">
             <h1>Chadwick Boseman</h1>
-            <p>Chadwick Aaron Boseman, an American actor, had a successful career spanning 
-               two decades. He gained recognition for his performances as various real-life 
-               figures and received multiple accolades, including Screen Actors Guild Awards, 
-               a Golden Globe Award, and a Primetime Emmy Award. Boseman started his career 
-               in theatre after studying directing at Howard University and later transitioned 
-               to the screen. His breakthrough role came as baseball player Jackie Robinson in 
-               the film "42" (2013). He continued to portray historical figures, such as singer 
+            <p>Chadwick Aaron Boseman, an American actor, had a successful career spanning
+               two decades. He gained recognition for his performances as various real-life
+               figures and received multiple accolades, including Screen Actors Guild Awards,
+               a Golden Globe Award, and a Primetime Emmy Award. Boseman started his career
+               in theatre after studying directing at Howard University and later transitioned
+               to the screen. His breakthrough role came as baseball player Jackie Robinson in
+               the film "42" (2013). He continued to portray historical figures, such as singer
                James Brown in "Get on Up" (2014) and Thurgood Marshall in "Marshall" (2017). </p>
-            
-            <a href="https://en.wikipedia.org/wiki/Chadwick_Boseman" target="_blank" class="btn" id="tribute-link">Learn More</a>
+
+            <a href="https://en.wikipedia.org/wiki/Chadwick_Boseman" target="_blank" class="btn" id="tribute-link">Learn
+               More</a>
          </div>
       </div>
 
-      <div class="tribute-timeline" id="tribute-timeline">
+      <div class="tribute-timeline" id="timeline">
          <div class="tribute-timeline-content">
-            <div class="year-select" onclick="toggleYrSb()" ><div><i class="fa-regular fa-calendar"></i></div></div>
+            <div class="year-select" onclick="toggleClass('hide-yr-sidebar', 'yr-sidebar')">
+               <div><i class="fa-regular fa-calendar"></i></div>
+            </div>
             <div class="timeline-events">
                <div id="1976" class="timeline-event-content">
-                  <h3 >1976 • Birth</h3>
+                  <h3>1976 • Birth</h3>
                   <p>Chadwick Aaron Boseman was born on <span>November 29, 1976</span>, in South Carolina.</p>
                </div>
                <div id="1995" class="timeline-event-content">
                   <div class="event-bullet"></div>
                   <h3>1995</h3>
-                  <p>Boseman graduated from T. L. Hanna High School in 1995, where he wrote his first play, Crossroads, and competed in Speech and Debate. He attended Howard University, graduating with a Bachelor of Fine Arts in directing in 2000. Boseman drew inspiration from his experience working in an African American bookstore.</p>
+                  <p>Boseman graduated from T. L. Hanna High School in 1995, where he wrote his first play, Crossroads,
+                     and competed in Speech and Debate. He attended Howard University, graduating with a Bachelor of
+                     Fine Arts in directing in 2000. Boseman drew inspiration from his experience working in an African
+                     American bookstore.</p>
                </div>
                <div id="1998" class="timeline-event-content">
                   <h3>1998</h3>
-                  <p>Boseman attended the Oxford Summer Program of the British American Drama Academy at Balliol College, Oxford, England, with the help of Al Freeman Jr. and Phylicia Rashad, who became a mentor. Boseman's passion for writing and directing led him to study acting and develop an appreciation for William Shakespeare's playwriting and the works of various dramatists. He also traveled to Africa, working with professor Mike Malone to preserve and celebrate rituals on a proscenium stage. After returning to the U.S., he graduated from New York City's Digital Film Academy.
+                  <p>Boseman attended the Oxford Summer Program of the British American Drama Academy at Balliol
+                     College, Oxford, England, with the help of Al Freeman Jr. and Phylicia Rashad, who became a mentor.
+                     Boseman's passion for writing and directing led him to study acting and develop an appreciation for
+                     William Shakespeare's playwriting and the works of various dramatists. He also traveled to Africa,
+                     working with professor Mike Malone to preserve and celebrate rituals on a proscenium stage. After
+                     returning to the U.S., he graduated from New York City's Digital Film Academy.
                   </p>
                </div>
                <div id="2000" class="timeline-event-content">
                   <h3>2000</h3>
-                  <p>Boseman lived in Brooklyn, New York City, at the start of his career. In 2000, he was named a Drama League Directing Fellow. He directed productions including George C. Wolfe's The Colored Museum (Wolfe would later direct Boseman in his final role) and a staging of Amiri Baraka's Dutchman. He worked as the drama instructor in the Schomburg Junior Scholars Program, housed at the Schomburg Center for Research in Black Culture in Harlem between 2002 and 2009.
+                  <p>Boseman lived in Brooklyn, New York City, at the start of his career. In 2000, he was named a Drama
+                     League Directing Fellow. He directed productions including George C. Wolfe's The Colored Museum
+                     (Wolfe would later direct Boseman in his final role) and a staging of Amiri Baraka's Dutchman. He
+                     worked as the drama instructor in the Schomburg Junior Scholars Program, housed at the Schomburg
+                     Center for Research in Black Culture in Harlem between 2002 and 2009.
                   </p>
                </div>
                <div id="2001" class="timeline-event-content">
                   <h3>2001</h3>
-                  <p>In 2002, he gained fame as a playwright and stage actor, winning an AUDELCO award for his role in Ron Milner's Urban Transitions. He also played Romeo in Romeo and Juliet and Malcolm in Macbeth. Boseman directed and wrote plays in the Hip-hop theater movement, including Rhyme Deferred and Hieroglyphic Graffiti. Both were commissioned for national tours and showcased at various venues.
+                  <p>In 2002, he gained fame as a playwright and stage actor, winning an AUDELCO award for his role in
+                     Ron Milner's Urban Transitions. He also played Romeo in Romeo and Juliet and Malcolm in Macbeth.
+                     Boseman directed and wrote plays in the Hip-hop theater movement, including Rhyme Deferred and
+                     Hieroglyphic Graffiti. Both were commissioned for national tours and showcased at various venues.
                   </p>
                </div>
                <div id="2003" class="timeline-event-content">
                   <h3>2003</h3>
-                  <p>Boseman began his television career in 2003 with Third Watch and later played Reggie Montgomery in All My Children. He faced criticism for racist stereotypes in the script, but was re-cast with Michael B. Jordan. Boseman aimed to work around these stereotypes, allowing for more improvisation in soap operas. He also appeared in Law & Order, Cold Case, CSI: NY, and ER.
+                  <p>Boseman began his television career in 2003 with Third Watch and later played Reggie Montgomery in
+                     All My Children. He faced criticism for racist stereotypes in the script, but was re-cast with
+                     Michael B. Jordan. Boseman aimed to work around these stereotypes, allowing for more improvisation
+                     in soap operas. He also appeared in Law & Order, Cold Case, CSI: NY, and ER.
                   </p>
                </div>
                <div id="2004" class="timeline-event-content">
                   <h3>2004</h3>
-                  <p>Boseman's best play Deep Azure, commissioned in 2004, was a fusion of his previous works about police brutality. It was workshopped at the Apollo Theater in New York and praised by critic Chris Jones. Boseman turned the play into a screenplay, which was directed by Michael Greene and produced by him. Blood Over a Broken Pawn was also a notable film.
+                  <p>Boseman's best play Deep Azure, commissioned in 2004, was a fusion of his previous works about
+                     police brutality. It was workshopped at the Apollo Theater in New York and praised by critic Chris
+                     Jones. Boseman turned the play into a screenplay, which was directed by Michael Greene and produced
+                     by him. Blood Over a Broken Pawn was also a notable film.
                   </p>
                </div>
                <div id="2008" class="timeline-event-content">
                   <h3>2008</h3>
-                  <p>In 2008, Boseman relocated to Los Angeles to pursue his film and acting career. He appeared in Lincoln Heights, The Express: The Ernie Davis Story, and Persons Unknown, receiving mediocre reviews. In 2013, he directed his second short film, Heaven, at the HollyShorts Film Festival.
+                  <p>In 2008, Boseman relocated to Los Angeles to pursue his film and acting career. He appeared in
+                     Lincoln Heights, The Express: The Ernie Davis Story, and Persons Unknown, receiving mediocre
+                     reviews. In 2013, he directed his second short film, Heaven, at the HollyShorts Film Festival.
                   </p>
                </div>
                <div id="2013-1" class="timeline-event-content">
                   <h3>2013</h3>
-                  <p>In 2013, Boseman made his breakthrough role in the film 42, portraying baseball legend Jackie Robinson. Boseman had been directing an off-Broadway play in the East Village when he auditioned for the role. Director Brian Helgeland chose Boseman due to his bravery in reading the difficult scene. Boseman trained with professional baseball coaches to replicate Robinson's mannerisms, and spoke with Robinson's widow, Rachel Robinson, to discover the character. He also starred in the independent film The Kill Hole.
+                  <p>In 2013, Boseman made his breakthrough role in the film 42, portraying baseball legend Jackie
+                     Robinson. Boseman had been directing an off-Broadway play in the East Village when he auditioned
+                     for the role. Director Brian Helgeland chose Boseman due to his bravery in reading the difficult
+                     scene. Boseman trained with professional baseball coaches to replicate Robinson's mannerisms, and
+                     spoke with Robinson's widow, Rachel Robinson, to discover the character. He also starred in the
+                     independent film The Kill Hole.
                   </p>
                </div>
                <div id="2013-2" class="timeline-event-content">
                   <h3>2013</h3>
-                  <p>In 2014, Boseman starred in Draft Day as fictional football player Vontae Mack. He had worked on the Tupac Shakur jukebox musical Holler If Ya Hear Me in 2013, but chose to take on the role of James Brown in Get on Up. Boseman worked with choreographer Aakomon Jones and producer Mick Jagger to prepare for the role. Despite not wanting to return to the biopic for another 15-20 years, Boseman was chosen by director Tate Taylor. Co-star Dan Aykroyd praised Boseman's performance, stating it was neither replication nor impression. Boseman stayed in character between filming on set, demonstrating a natural acting approach.
+                  <p>In 2014, Boseman starred in Draft Day as fictional football player Vontae Mack. He had worked on
+                     the Tupac Shakur jukebox musical Holler If Ya Hear Me in 2013, but chose to take on the role of
+                     James Brown in Get on Up. Boseman worked with choreographer Aakomon Jones and producer Mick Jagger
+                     to prepare for the role. Despite not wanting to return to the biopic for another 15-20 years,
+                     Boseman was chosen by director Tate Taylor. Co-star Dan Aykroyd praised Boseman's performance,
+                     stating it was neither replication nor impression. Boseman stayed in character between filming on
+                     set, demonstrating a natural acting approach.
                   </p>
                </div>
                <div id="2014" class="timeline-event-content">
                   <h3>2014</h3>
-                  <p>Boseman sold a thriller screenplay to Universal Pictures in 2014, which he collaborated on with Logan Coles. He starred in Gods of Egypt in 2016, playing the role of Thoth, an Egyptian deity. Despite criticism for using a predominantly white cast, Boseman accepted the role to ensure African characters were played by someone of African descent. His first largely CGI film, Gods of Egypt, was heavily criticized for lacking story and interesting characters.
+                  <p>Boseman sold a thriller screenplay to Universal Pictures in 2014, which he collaborated on with
+                     Logan Coles. He starred in Gods of Egypt in 2016, playing the role of Thoth, an Egyptian deity.
+                     Despite criticism for using a predominantly white cast, Boseman accepted the role to ensure African
+                     characters were played by someone of African descent. His first largely CGI film, Gods of Egypt,
+                     was heavily criticized for lacking story and interesting characters.
                   </p>
                </div>
                <div id="2015" class="timeline-event-content">
                   <h3>2015</h3>
-                  <p>In 2015, Boseman started dating singer Taylor Simone Ledward. The couple allegedly became engaged by October 2019 and eventually wed secretly, according to information provided by Boseman's family in a statement announcing his passing.
+                  <p>In 2015, Boseman started dating singer Taylor Simone Ledward. The couple allegedly became engaged
+                     by October 2019 and eventually wed secretly, according to information provided by Boseman's family
+                     in a statement announcing his passing.
                   </p>
                </div>
                <div id="2016-1" class="timeline-event-content">
                   <h3>2016</h3>
-                  <p>Boseman was diagnosed with stage III colon cancer in 2016, which progressed to stage IV before 2020. Despite his illness, he never publicly disclosed it, and only a few non-family members knew about it. Despite multiple surgeries and chemotherapy, Boseman continued to work and completed productions for several films.
+                  <p>Boseman was diagnosed with stage III colon cancer in 2016, which progressed to stage IV before
+                     2020. Despite his illness, he never publicly disclosed it, and only a few non-family members knew
+                     about it. Despite multiple surgeries and chemotherapy, Boseman continued to work and completed
+                     productions for several films.
                   </p>
                </div>
                <div id="2016-2" class="timeline-event-content">
                   <h3>2016</h3>
-                  <p>Boseman began portraying Marvel Comics character T'Challa / Black Panther in Captain America: Civil War. Boseman learned Xhosa from John Kani and developed a Wakandan accent himself. He felt pressure not to "screw up" the beloved comics character, but identified more with the character's nemesis, Killmonger, knowing that his roots to his African past had been severed. Producer Kevin Feige explained that the character was included in Civil War because they needed a third party with a different point of view than Tony or Steve. Boseman's performance in Civil War was highly praised, but critics acknowledged the character's inclusion was largely to set up his upcoming headlining movie.
+                  <p>Boseman began portraying Marvel Comics character T'Challa / Black Panther in Captain America: Civil
+                     War. Boseman learned Xhosa from John Kani and developed a Wakandan accent himself. He felt pressure
+                     not to "screw up" the beloved comics character, but identified more with the character's nemesis,
+                     Killmonger, knowing that his roots to his African past had been severed. Producer Kevin Feige
+                     explained that the character was included in Civil War because they needed a third party with a
+                     different point of view than Tony or Steve. Boseman's performance in Civil War was highly praised,
+                     but critics acknowledged the character's inclusion was largely to set up his upcoming headlining
+                     movie.
                   </p>
                </div>
                <div id="2017" class="timeline-event-content">
                   <h3>2017</h3>
-                  <p>In 2017, Boseman portrayed Thurgood Marshall in the biographical film Marshall, set years before he became the first African American Supreme Court Justice. Boseman researched Marshall extensively and studied videos to reflect his wiry frame. Despite initial concerns about being put into a "biopic box," he enjoyed the script's historical relevance and the character's mentorship. The film received average critical reception, but Vulture criticized Boseman's casting, stating that Marshall's light-skinned appearance influenced his legend. Boseman was convinced that the film's insular story did not matter as much.
+                  <p>In 2017, Boseman portrayed Thurgood Marshall in the biographical film Marshall, set years before he
+                     became the first African American Supreme Court Justice. Boseman researched Marshall extensively
+                     and studied videos to reflect his wiry frame. Despite initial concerns about being put into a
+                     "biopic box," he enjoyed the script's historical relevance and the character's mentorship. The film
+                     received average critical reception, but Vulture criticized Boseman's casting, stating that
+                     Marshall's light-skinned appearance influenced his legend. Boseman was convinced that the film's
+                     insular story did not matter as much.
                   </p>
                </div>
                <div id="2018" class="timeline-event-content">
                   <h3>2018</h3>
-                  <p>Boseman reprised his role in Avengers: Infinity War and Avengers: Endgame, both of which achieved high grossings. Infinity War was filmed concurrently with Black Panther, with Boseman and other actors improvising chanting scenes from the latter. His last physical appearance as Black Panther was in Endgame, where he voiced alternate versions of T'Challa in the 2021 Disney+ animated series What If...?.
+                  <p>Boseman reprised his role in Avengers: Infinity War and Avengers: Endgame, both of which achieved
+                     high grossings. Infinity War was filmed concurrently with Black Panther, with Boseman and other
+                     actors improvising chanting scenes from the latter. His last physical appearance as Black Panther
+                     was in Endgame, where he voiced alternate versions of T'Challa in the 2021 Disney+ animated series
+                     What If...?.
                   </p>
                </div>
                <div id="2019-1" class="timeline-event-content">
                   <h3>2019</h3>
-                  <p>In 2019, Boseman was cast in Netflix films Da 5 Bloods and Ma Rainey's Black Bottom, directed by Spike Lee and George C. Wolfe respectively. Boseman expressed his desire to make non-superhero films and co-produce a film about Yasuke, the first black man in Japan. He was included in Time's list of the 10 Best Movie Performances of 2020 and received posthumous nominations for Ma Rainey, becoming the eighth person to receive a posthumous Academy Award acting nomination.
+                  <p>In 2019, Boseman was cast in Netflix films Da 5 Bloods and Ma Rainey's Black Bottom, directed by
+                     Spike Lee and George C. Wolfe respectively. Boseman expressed his desire to make non-superhero
+                     films and co-produce a film about Yasuke, the first black man in Japan. He was included in Time's
+                     list of the 10 Best Movie Performances of 2020 and received posthumous nominations for Ma Rainey,
+                     becoming the eighth person to receive a posthumous Academy Award acting nomination.
                   </p>
                </div>
                <div id="2019-2" class="timeline-event-content">
                   <h3>2019</h3>
-                  <p>In 2019, Boseman starred in 21 Bridges, an action thriller film directed by Brian Kirk. Boseman was approached to work on the film by Avengers producers, the Russo brothers, and Endgame. Boseman was also a producer on 21 Bridges, encouraging changes to the story and characters. He sought out Sienna Miller as a co-star, who requested a salary that the studio could not meet, and donated the rest from his own pay. Boseman also personally called Stephan James to play one of the criminals Boseman's detective is hunting. Boseman and Coles fought for casting and actors with particular sensibilities and feelings. In 2019, Boseman accepted the Screen Actors Guild Award for Outstanding Performance by a Cast in a Motion Picture.
+                  <p>In 2019, Boseman starred in 21 Bridges, an action thriller film directed by Brian Kirk. Boseman was
+                     approached to work on the film by Avengers producers, the Russo brothers, and Endgame. Boseman was
+                     also a producer on 21 Bridges, encouraging changes to the story and characters. He sought out
+                     Sienna Miller as a co-star, who requested a salary that the studio could not meet, and donated the
+                     rest from his own pay. Boseman also personally called Stephan James to play one of the criminals
+                     Boseman's detective is hunting. Boseman and Coles fought for casting and actors with particular
+                     sensibilities and feelings. In 2019, Boseman accepted the Screen Actors Guild Award for Outstanding
+                     Performance by a Cast in a Motion Picture.
                   </p>
                </div>
                <div id="2020" class="timeline-event-content">
                   <h3>2020 • End Of Life...</h3>
-                  <p>Boseman died at his Los Angeles home as a result of complications related to colon cancer on August 28, 2020, with his wife and family by his side. He was 43 years old. He died intestate (without a will), and his estate was governed by California law with the representation of Ledward. A public memorial service was held on September 4, 2020, in Anderson, South Carolina. Speakers included Boseman's childhood pastor as well as Deanna Brown-Thomas, daughter of James Brown, whom Boseman portrayed in Get on Up. The city announced plans for the creation of a permanent art memorial at the service. Despite reports that Boseman was buried at Welfare Baptist Church cemetery in nearby Belton, South Carolina, the funeral home handling the services and the church pastor both denied this.
+                  <p>Boseman died at his Los Angeles home as a result of complications related to colon cancer on August
+                     28, 2020, with his wife and family by his side. He was 43 years old. He died intestate (without a
+                     will), and his estate was governed by California law with the representation of Ledward. A public
+                     memorial service was held on September 4, 2020, in Anderson, South Carolina. Speakers included
+                     Boseman's childhood pastor as well as Deanna Brown-Thomas, daughter of James Brown, whom Boseman
+                     portrayed in Get on Up. The city announced plans for the creation of a permanent art memorial at
+                     the service. Despite reports that Boseman was buried at Welfare Baptist Church cemetery in nearby
+                     Belton, South Carolina, the funeral home handling the services and the church pastor both denied
+                     this.
                   </p>
                </div>
             </div>
@@ -160,7 +252,7 @@
          <div id="yr-sidebar" class="year-sidebar hide-yr-sidebar">
             <div class="close">
                <p>Timeline</p>
-               <i onclick="toggleYrSb()" class="fa-solid fa-x"></i>
+               <i onclick="toggleClass('hide-yr-sidebar', 'yr-sidebar')" class="fa-solid fa-x"></i>
             </div>
             <div class="yr-buttons">
                <div data-yr-btn="1976" class="yr-option">1976</div>
@@ -186,7 +278,239 @@
          </div>
       </div>
 
+      <div id="response" class="tribute-response">
+         <a href="https://twitter.com/chadwickboseman/status/1299530165463199747" target="_blank">
+            <img src="https://jos3ph1205.github.io/tribute-page/img/passing_announcement.png"
+               alt="Image of announcement tweet of chadwick's passing.">
+            <figcaption>Twitter.com</figcaption>
+         </a>
+         <p class="response-info">The day after Boseman died, the tweet in which his family announced his death on his
+            Twitter account became the
+            most-liked tweet in history, with over six million likes in under 24 hours, and accumulating over seven
+            million by August 31, far displacing the previous record holder. His death was likened to other unexpected
+            deaths
+            of other celebrities in 2020, particularly Kobe Bryant and Naya Rivera. The Associated Press and Clarín
+            noted
+            Rivera and Boseman as Hollywood's most impactful 2020 deaths.</p>
+         <div class="tribute-response-statmenets">
+            <div class="response-statement">
+               <h3>Marvel Studios</h3>
+               <p><span>"</span> Each time he stepped on set, he radiated charisma and joy, and each time he appeared on
+                  screen, he created something
+                  truly indelible... Now he takes his place as an icon for the ages. "</p>
+            </div>
+            <div class="response-statement">
+               <h3>Howard University</h3>
+               <p><span>"</span> His incredible talent will forever be immortalized through his characters and through
+                  his own personal journey from
+                  student to superhero. "</p>
+            </div>
+         </div>
+      </div>
+
+      <div id="movies" class="films">
+         <h2>MOVIES</h2>
+         <div class="table-container">
+            <table class="film-table">
+               <tr>
+                  <td class="tb-year">Year</td>
+                  <td class="tb-title">Title</td>
+                  <td class="tb-role">Role</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2008</td>
+                  <td class="tb-title">The Express: The Ernie Davis Story</td>
+                  <td class="tb-role">Floyd Lttle</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2012</td>
+                  <td class="tb-title">The Kill Hole</td>
+                  <td class="tb-role">Lt. Samuel Drake</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2013</td>
+                  <td class="tb-title">42</td>
+                  <td class="tb-role">Jackie Robinson</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2014</td>
+                  <td class="tb-title">Draft Day</td>
+                  <td class="tb-role">Vontae Mack</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2014</td>
+                  <td class="tb-title">Get On Up</td>
+                  <td class="tb-role">James Brown</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2016</td>
+                  <td class="tb-title">Gods of Egypt</td>
+                  <td class="tb-role">Thoth</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2016</td>
+                  <td class="tb-title">Captain America: Civil War</td>
+                  <td class="tb-role">T'Challa / Black Panther</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2016</td>
+                  <td class="tb-title">Message from the King</td>
+                  <td class="tb-role">Jacob Kind</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2017</td>
+                  <td class="tb-title">Marshall</td>
+                  <td class="tb-role">Thurgood Marshall</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2018</td>
+                  <td class="tb-title">Black Panther</td>
+                  <td class="tb-role">T'Challa / Black Panther</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2018</td>
+                  <td class="tb-title">Avengers: Infinity War</td>
+                  <td class="tb-role">T'Challa / Black Panther</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2019</td>
+                  <td class="tb-title">Avengers: Endgame</td>
+                  <td class="tb-role">T'Challa / Black Panther</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2019</td>
+                  <td class="tb-title">21 Bridges</td>
+                  <td class="tb-role">Andre Davis</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2020</td>
+                  <td class="tb-title">Da 5 Bloods</td>
+                  <td class="tb-role">Norman Earl "Stormin' Norm" Hollaway</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2020</td>
+                  <td class="tb-title">Ma Rainey's Black Bottom</td>
+                  <td class="tb-role">Leeve Green</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2022</td>
+                  <td class="tb-title">Black Panther: Wakanda Forever</td>
+                  <td class="tb-role">T'Challa / Black Panther</td>
+               </tr>
+            </table>
+         </div>
+         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Filmography" target="_blank">Learn More</a>
+      </div>
+
+      <div id="shows" class="tv-shows">
+         <h2>TV SHOWS</h2>
+         <div class="table-container">
+            <table class="shows-table">
+               <tr>
+                  <td class="tb-year">Year</td>
+                  <td class="tb-title">Title</td>
+                  <td class="tb-role">Role</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2003</td>
+                  <td class="tb-title">All My Children</td>
+                  <td class="tb-role">Reggie Porter</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2003</td>
+                  <td class="tb-title">Third Watch</td>
+                  <td class="tb-role">David Wafer</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2004</td>
+                  <td class="tb-title">Law & Order</td>
+                  <td class="tb-role">Foster Keyes</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2006</td>
+                  <td class="tb-title">CSI: NY</td>
+                  <td class="tb-role">Rondo</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2008</td>
+                  <td class="tb-title">ER</td>
+                  <td class="tb-role">Derek Taylor</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2008</td>
+                  <td class="tb-title">Cold Case</td>
+                  <td class="tb-role">Dexter Collins</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2008 - 2009</td>
+                  <td class="tb-title">Linclon Heights</td>
+                  <td class="tb-role">Nathaniel "Nate" Ray</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2009</td>
+                  <td class="tb-title">Lie to Me</td>
+                  <td class="tb-role">Cabe McNeil</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2010</td>
+                  <td class="tb-title">Persons Unknown</td>
+                  <td class="tb-role">Sergeant Graham McNair</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2010</td>
+                  <td class="tb-title">The Glades</td>
+                  <td class="tb-role">Michael Richmond</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2011</td>
+                  <td class="tb-title">Castle</td>
+                  <td class="tb-role">Chuck Russel</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2011</td>
+                  <td class="tb-title">Detroit 1-8-7</td>
+                  <td class="tb-role">Tommy Westin</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2011</td>
+                  <td class="tb-title">Justified</td>
+                  <td class="tb-role">Ralph Beeman</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2011</td>
+                  <td class="tb-title">Fringe</td>
+                  <td class="tb-role">Mark Little / Cameron James</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2018</td>
+                  <td class="tb-title">Saturday Night Live</td>
+                  <td class="tb-role">Himself (Host)</td>
+               </tr>
+               <tr>
+                  <td class="tb-year">2021</td>
+                  <td class="tb-title">What If...?</td>
+                  <td class="tb-role">Star Lord T'Challa / T'Challa / Black Panther (voice)</td>
+               </tr>
+            </table>
+         </div>
+         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Television" target="_blank">Learn More</a>
+      </div>
+
    </main>
+
+   <footer>
+      <div class="follow-links">
+         <a href="https://github.com/jos3ph1205" target="_blank" class="link"><i class="fa-brands fa-github"></i></a>
+         <a href="https://www.freecodecamp.org/fcce26c4d36-eb16-4859-917c-9bc6b54a4344" target="_blank" class="link"><i class="fa-brands fa-free-code-camp"></i></a>
+         <a href="https://codepen.io/Joseph_1205" target="_blank" class="link"><i class="fa-brands fa-codepen"></i></a>
+      </div>
+      </div>
+      <div class="creator">
+         <p>Designed & Publish by Joseph1205</p>
+         <img src="logo_final.svg" alt="">
+      </div>
+   </footer>
    <script src="script.js" defer></script>
 </body>
+
 </html>
