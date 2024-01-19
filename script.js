@@ -9,7 +9,7 @@ function scrollToTargetAdjusted(href){
     var element = document.getElementById(href);
     var headerOffset = 70;
     var elementPosition = element.getBoundingClientRect().top;
-    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    var offsetPosition = elementPosition + window.scrollY - headerOffset;
   
     window.scrollTo({
          top: offsetPosition,
@@ -17,15 +17,15 @@ function scrollToTargetAdjusted(href){
     });
 }
 
-let event = document.querySelectorAll('[data-yr-btn]').forEach(anchor => {
+const timelineEvent = document.querySelectorAll('[data-yr-btn]').forEach(anchor => {
     let href = anchor.getAttribute('data-yr-btn');
     anchor.addEventListener("click", () => {
         scrollToTargetAdjusted(href);
     })
 })
 
-function toggleYrSb() {
-    document.getElementById("yr-sidebar").classList.toggle("hide-yr-sidebar");
+function toggleClass(className, elementID) {
+    document.getElementById(elementID).classList.toggle(className);
 }
 
 console.log(event);
@@ -33,15 +33,17 @@ console.log(event);
 
 // Navbar Top Edge Hover
 navWrapper.addEventListener("mouseenter", (event) => {
+    const infoToggled = document.getElementById("infolink").classList.contains("toggled");
     let winScroll = window.scrollY;
-    if (winScroll == 0) {
+    if (winScroll == 0 & infoToggled == false) {
         navBar.style.top = "0";
         // console.log("nav shown");
     }
 
     navWrapper.addEventListener("mouseleave", (event) => {
+        const infoToggled = document.getElementById("infolink").classList.contains("toggled");
         let winScroll = window.scrollY;
-        if (winScroll == 0) {
+        if (winScroll == 0 & infoToggled == false) {
             navBar.style.top = "-50px"
             // console.log("nav hidden");
         }
@@ -50,10 +52,11 @@ navWrapper.addEventListener("mouseenter", (event) => {
 
 function showScrollBar() {   
     let winScroll = window.scrollY;
+    const infoToggled = document.getElementById("infolink").classList.contains("toggled");
 
     if (winScroll > 0) {
         navBar.style.top = "0";
-    } else if (winScroll == 0) {
+    } else if (winScroll == 0 & infoToggled == false) {
         navBar.style.top = "-50px";
     }
 }
@@ -64,7 +67,6 @@ function showScrollBar() {
 // });
 
 addEventListener("load", () => {
-
     showScrollBar();
 });
 
