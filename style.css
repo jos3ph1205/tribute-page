@@ -556,13 +556,15 @@ body {
 }
 
 .timeline-event-content h3 {
-   font-size: 18px;
+   font-size: 1.2rem;
    font-weight: bold;
    color: var(--shade-4);
 }
 
 .timeline-event-content p {
-   font-size: 14px;
+   text-align: justify;
+   text-justify: inter-word;
+   font-size: 1rem;
 }
 
 .year-sidebar {
@@ -649,23 +651,39 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   text-align: justify;
+   text-justify: inter-word;
 }
 
-.tribute-response>a {
-   text-align: center;
+.twitter-response-wrap {
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+figcaption a {
    color: var(--shade-5);
    text-shadow: 0 0 3px var(--shade-5);
 }
 
-.tribute-response>a figcaption {
+figcaption {
+   text-align: center;
    margin-top: .5rem;
 }
 
-.tribute-response img {
-   border-radius: 10px;
+.response-img {
    width: min(650px, 90vw);
-   object-fit: cover;
-   display: block;
+   height: 300px;
+   overflow-y: scroll;
+   padding: 20px;
+   position: relative;
+}
+
+.response-img img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 100%;
 }
 
 .tribute-response-statmenets {
@@ -696,7 +714,7 @@ body {
 
 .response-statement p {
    margin-top: 0.3rem;
-   font-size: 0.8rem;
+   font-size: 1rem;
    display: flex;
    gap: 3px;
    flex: 1;
@@ -725,7 +743,7 @@ body {
 .response-info {
    margin-top: 2rem;
    width: min(650px, 90vw);
-   font-size: 0.8rem;
+   font-size: .95rem;
 }
 
 /*Table CSS */
@@ -993,7 +1011,7 @@ footer {
 
    .film-table,
    .shows-table {
-      font-size: 0.8rem;
+      font-size: .95rem;
    }
 
    footer {
