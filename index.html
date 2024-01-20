@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Chadwick Boseman - Tribute</title>
+   <title>Document</title>
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -14,13 +14,13 @@
       <div id="navbar" class="navbar">
          <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#info">About</a>
+            <a href="#about">About</a>
             <a href="#timeline">Timeline</a>
             <div class="info">
-               <p id="infolink" href="" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" class="">Info<i class="fa-solid fa-caret-down"></i></p>
+               <p data-info-dd-toggle id="infolink" href="" class="">Info<i class="fa-solid fa-caret-down"></i></p>
                <div id="infoWin" class="info-dropdown">
-                  <a class="info-dd-option" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" href="#movies">Movies</a>
-                  <a class="info-dd-option" onclick="toggleClass('info-dropdown-toggled', 'infoWin'), toggleClass('toggled', 'infolink')" href="#shows">TV Shows</a>
+                  <a data-info-dd-option class="info-dd-option" href="#movies">Movies</a>
+                  <a data-info-dd-option class="info-dd-option" href="#shows">TV Shows</a>
                </div>
             </div>
          </div>
@@ -40,7 +40,7 @@
       </div>
 
       <!-- Tribute Info Design -->
-      <div id="info" class="tribute-info">
+      <div id="about" class="tribute-info">
          <div class="tribute-image">
             <div id="img-div">
                <div id="image-div">
@@ -70,7 +70,7 @@
 
       <div class="tribute-timeline" id="timeline">
          <div class="tribute-timeline-content">
-            <div class="year-select" onclick="toggleClass('hide-yr-sidebar', 'yr-sidebar')">
+            <div data-yr-sb-toggle class="year-select">
                <div><i class="fa-regular fa-calendar"></i></div>
             </div>
             <div class="timeline-events">
@@ -250,9 +250,9 @@
             </div>
          </div>
          <div id="yr-sidebar" class="year-sidebar hide-yr-sidebar">
-            <div class="close">
+            <div data-yr-sb-toggle class="close">
                <p>Timeline</p>
-               <i onclick="toggleClass('hide-yr-sidebar', 'yr-sidebar')" class="fa-solid fa-x"></i>
+               <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="yr-buttons">
                <div data-yr-btn="1976" class="yr-option">1976</div>
@@ -279,11 +279,13 @@
       </div>
 
       <div id="response" class="tribute-response">
-         <a href="https://twitter.com/chadwickboseman/status/1299530165463199747" target="_blank">
-            <img src="https://jos3ph1205.github.io/tribute-page/img/passing_announcement.png"
-               alt="Image of announcement tweet of chadwick's passing.">
-            <figcaption>Twitter.com</figcaption>
-         </a>
+         <div class="twitter-response-wrap">
+            <div class="twitter-response">
+               <div class="response-img"><img src="img/passing_annoucement.jpeg" alt=""></div>
+            </div>
+         </div>
+         <figcaption><a href="https://twitter.com/chadwickboseman/status/1299530165463199747"
+               target="_blank">Twitter.com</a></figcaption>
          <p class="response-info">The day after Boseman died, the tweet in which his family announced his death on his
             Twitter account became the
             most-liked tweet in history, with over six million likes in under 24 hours, and accumulating over seven
@@ -399,7 +401,8 @@
                </tr>
             </table>
          </div>
-         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Filmography" target="_blank">Learn More</a>
+         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Filmography" target="_blank">Learn
+            More</a>
       </div>
 
       <div id="shows" class="tv-shows">
@@ -493,7 +496,8 @@
                </tr>
             </table>
          </div>
-         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Television" target="_blank">Learn More</a>
+         <a class="btn tb-btn" href="https://en.wikipedia.org/wiki/Chadwick_Boseman#Television" target="_blank">Learn
+            More</a>
       </div>
 
    </main>
@@ -501,7 +505,8 @@
    <footer>
       <div class="follow-links">
          <a href="https://github.com/jos3ph1205" target="_blank" class="link"><i class="fa-brands fa-github"></i></a>
-         <a href="https://www.freecodecamp.org/fcce26c4d36-eb16-4859-917c-9bc6b54a4344" target="_blank" class="link"><i class="fa-brands fa-free-code-camp"></i></a>
+         <a href="https://www.freecodecamp.org/fcce26c4d36-eb16-4859-917c-9bc6b54a4344" target="_blank" class="link"><i
+               class="fa-brands fa-free-code-camp"></i></a>
          <a href="https://codepen.io/Joseph_1205" target="_blank" class="link"><i class="fa-brands fa-codepen"></i></a>
       </div>
       </div>
