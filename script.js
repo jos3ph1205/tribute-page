@@ -38,7 +38,7 @@ function showScrollBar() {
 
 
 // NAVBAR TOP EDGE HOVER TRIGGER
-navWrapper.addEventListener("mouseenter", (event) => {
+navWrapper.addEventListener("mouseover", (event) => {
     const infoToggled = document.getElementById("infolink").classList.contains("toggled");
     let winScroll = window.scrollY;
     if (winScroll == 0 & infoToggled == false) {
