@@ -352,7 +352,8 @@ body {
 
 .tribute-content {
    margin-left: 5rem;
-   text-align: left;
+   text-align: justify;
+   text-justify: inter-word;
    width: min(500px, 85vw);
 }
 
