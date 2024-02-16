@@ -829,7 +829,7 @@ figcaption {
    left: 0;
    inset: 0;
    z-index: -1;
-   background-image: url(img/saturday_night_live.gif);
+   background-image: url(img/saturday-night-live.gif);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
